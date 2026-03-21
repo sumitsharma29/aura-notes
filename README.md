@@ -41,7 +41,7 @@ Aura Notes is built using pure Vanilla web technologies, making it incredibly li
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/aura-notes.git
+   git clone https://github.com/sumitsharma29/aura-notes.git
    ```
 2. **Navigate to the project directory:**
    ```bash
