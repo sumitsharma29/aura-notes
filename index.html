@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- SEO & Metadata -->
+    <title>Aura Notes • The Zenith of Productivity & Aesthetics</title>
+    <meta name="description" content="Ultra-modern aesthetic workspace with AI tools, canvas sketchpad, speech dictation, audio memo recorder, Pomodoro ambient sounds, and offline PWA.">
+    <meta name="theme-color" content="#8e2de2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Aura Notes">
+    <link rel="manifest" href="manifest.json">
+
     <!-- Aura Favicon (Base64 SVG) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImF1cmEtZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhlMmRlMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YwMDBmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ1IiBmaWxsPSJ1cmwoI2F1cmEtZ3JhZCkiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIyMCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45Ii8+PC9zdmc+">
-    
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImF1cmEtZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhlMmRlMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YwMDBmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ1IiBmaWxsPSJ1cmwoI2F1cmEtZ3JhZCkiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIyMCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45Ii8+PC9zdmc+">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Export Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -18,17 +28,73 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
-    <div class="bg-shape shape-3"></div>
+<body class="theme-cosmic">
+    <!-- Cinematic Opening Splash Screen -->
+    <div id="aura-splash-screen" class="aura-splash-screen">
+        <div class="splash-content">
+            <div class="splash-orb-container">
+                <div class="splash-energy-ring ring-1"></div>
+                <div class="splash-energy-ring ring-2"></div>
+                <div class="splash-aura-logo">
+                    <svg viewBox="0 0 100 100" class="splash-svg" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="splash-aura-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#8e2de2" />
+                                <stop offset="100%" stop-color="#f000ff" />
+                            </linearGradient>
+                            <filter id="splash-glow">
+                                <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="50" cy="50" r="38" fill="url(#splash-aura-grad)" filter="url(#splash-glow)"/>
+                        <circle cx="50" cy="50" r="16" fill="#ffffff" opacity="0.95"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="splash-title">AURA NOTES</h1>
+            <p class="splash-tagline">The Zenith of Productivity & Aesthetics</p>
+            <div class="splash-loader-bar">
+                <div class="splash-loader-progress"></div>
+            </div>
+        </div>
+    </div>
 
-    <div class="app-container" id="app-container">
+    <!-- Ambient Aurora Gradient Mesh -->
+    <div class="aurora-ambient-container" aria-hidden="true">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-shape shape-4"></div>
+    </div>
+
+    <!-- PWA Install Banner -->
+    <aside class="pwa-install-banner" id="pwa-banner">
+        <div class="pwa-banner-content">
+            <svg viewBox="0 0 100 100" class="aura-logo-sm" aria-hidden="true">
+                <circle cx="50" cy="50" r="45" fill="url(#aura-grad)"/>
+                <circle cx="50" cy="20" r="20" fill="#ffffff" opacity="0.9"/>
+            </svg>
+            <div class="pwa-banner-text">
+                <strong>Install Aura Notes App</strong>
+                <span>Instant launch & full offline capability</span>
+            </div>
+        </div>
+        <div class="pwa-banner-actions">
+            <button id="btn-pwa-dismiss" class="btn-pwa-ghost">Not now</button>
+            <button id="btn-pwa-install" class="btn-pwa-primary">Install</button>
+        </div>
+    </aside>
+
+    <main class="app-container" id="app-container">
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
+        <nav class="sidebar" id="sidebar" aria-label="Notes Directory">
             <div class="sidebar-header">
                 <div class="logo-container">
-                    <svg viewBox="0 0 100 100" class="aura-logo" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 100 100" class="aura-logo" xmlns="http://www.w3.org/2000/svg" aria-label="Aura Notes Logo">
                         <defs>
                             <linearGradient id="aura-grad" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#8e2de2" />
@@ -43,202 +109,658 @@
                             </filter>
                         </defs>
                         <circle cx="50" cy="50" r="35" fill="url(#aura-grad)" filter="url(#glow)"/>
-                        <circle cx="50" cy="50" r="15" fill="#ffffff" opacity="0.9"/>
+                        <circle cx="50" cy="50" r="15" fill="#ffffff" opacity="0.95"/>
                     </svg>
-                    <h2>Aura</h2>
+                    <h1>Aura</h1>
+                    <span class="version-badge">PRO</span>
                 </div>
                 <div class="header-actions">
-                    <button id="btn-theme" class="btn-icon" title="Toggle Theme">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <button id="btn-focus-suite" class="btn-icon" title="Focus Suite: Pomodoro & Lo-Fi Sounds" aria-label="Focus Suite">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     </button>
-                    <button id="btn-add" class="btn-primary" title="New Note (Ctrl+N)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <button id="btn-command-palette-trigger" class="btn-icon" title="Command Palette (Ctrl+K / Cmd+K)" aria-label="Command Palette">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+                    </button>
+                    <button id="btn-theme-modal" class="btn-icon" title="Themes & Style" aria-label="Theme Switcher">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a7 7 0 0 0 0 14 7 7 0 0 0 0-14z" fill="currentColor"></path></svg>
+                    </button>
+                    <button id="btn-sound-toggle" class="btn-icon" title="Tactile UI Sounds" aria-label="Audio Feedback">
+                        <svg id="sound-icon-on" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                    </button>
+                    <button id="btn-add" class="btn-primary" title="New Note (Ctrl+N)" aria-label="Create New Note">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </button>
                 </div>
             </div>
+
+            <!-- Search & Filter Bar -->
             <div class="search-container">
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" id="search-input" placeholder="Search your thoughts...">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" class="search-icon" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" placeholder="Search notes, tags, or text..." aria-label="Search Notes">
+                <button id="btn-clear-search" class="btn-search-clear" style="display:none;" title="Clear Search">✕</button>
             </div>
-            <div class="notes-list" id="notes-list">
-                <!-- Notes injected here -->
+
+            <!-- Tags & Category Quick Filter Bar -->
+            <div class="tags-filter-bar" id="tags-filter-bar">
+                <button class="tag-chip active" data-tag="all">All Notes</button>
+                <button class="tag-chip" data-tag="pinned">📌 Pinned</button>
+                <button class="tag-chip" data-tag="locked">🔒 Vault</button>
+                <button class="tag-chip" data-tag="work">💼 Work</button>
+                <button class="tag-chip" data-tag="ideas">💡 Ideas</button>
+                <button class="tag-chip" data-tag="personal">🌿 Personal</button>
+                <button class="tag-chip" data-tag="todo">☑️ To-Dos</button>
+                <button class="tag-chip" data-tag="archived">📦 Archive</button>
             </div>
-            <div class="copyright">Aura Notes</div>
-        </div>
+
+            <!-- Notes List -->
+            <div class="notes-list" id="notes-list" role="list">
+                <!-- Notes dynamically injected here -->
+            </div>
+
+            <!-- Sidebar Footer & Backup Tools -->
+            <div class="sidebar-footer">
+                <button id="btn-open-templates" class="btn-sidebar-action" title="Start from a Template">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    <span>Templates</span>
+                </button>
+                <button id="btn-backup-modal" class="btn-sidebar-action" title="Backup & Restore Data">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Backup</span>
+                </button>
+            </div>
+        </nav>
         
         <!-- Main Editor -->
-        <div class="editor" id="editor" style="display: none;">
+        <section class="editor" id="editor" style="display: none;" aria-label="Note Editor">
             <div class="editor-header">
                 <div class="title-wrapper">
-                    <button id="btn-back-mobile" class="btn-icon mobile-only" title="Back to Notes">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <button id="btn-back-mobile" class="btn-icon mobile-only" title="Back to Notes List" aria-label="Back">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     </button>
-                    <input type="text" id="note-title" class="note-title-input" placeholder="Give it a title...">
+                    <input type="text" id="note-title" class="note-title-input" placeholder="Title your brilliance..." aria-label="Note Title">
                 </div>
                 
                 <div class="editor-actions">
-                    <button id="btn-share" class="btn-icon" title="Share Note">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    <!-- AI Assistant Menu Button -->
+                    <button id="btn-ai-tools" class="btn-icon ai-glow-btn" title="AI Magic Tools (Summarize, Polish, Format)" aria-label="AI Writing Tools">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
                     </button>
-                    <button id="btn-focus" class="btn-icon desktop-only" title="Focus Mode">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+
+                    <!-- Voice Audio Memo Recorder (Record & Embed Player) -->
+                    <button id="btn-record-memo" class="btn-icon memo-record-btn" title="Record Voice Audio Memo" aria-label="Record Audio Memo">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="6" fill="#ef4444" stroke="none"></circle><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line></svg>
                     </button>
-                    <button id="btn-pin" class="btn-icon" title="Toggle Pin">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" id="pin-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+
+                    <!-- Voice Speech-to-Text Dictate -->
+                    <button id="btn-dictate" class="btn-icon" title="Voice Dictation (Speech-to-Text)" aria-label="Voice Dictate">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                    </button>
+
+                    <!-- Creative Canvas / Sketchpad -->
+                    <button id="btn-open-sketch" class="btn-icon" title="Handwriting & Canvas Sketchpad" aria-label="Open Sketchpad">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                    </button>
+
+                    <!-- Focus Mode Toggle -->
+                    <button id="btn-focus" class="btn-icon desktop-only" title="Focus Mode (Ctrl+\)" aria-label="Focus Mode">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                    </button>
+
+                    <!-- Lock / Vault Note -->
+                    <button id="btn-lock-note" class="btn-icon" title="Lock Note with PIN Vault" aria-label="Lock Note">
+                        <svg id="lock-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </button>
+
+                    <!-- Pin Note -->
+                    <button id="btn-pin" class="btn-icon" title="Toggle Pin to Top" aria-label="Pin Note">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" id="pin-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </button>
+
+                    <!-- Share -->
+                    <button id="btn-share" class="btn-icon" title="Share Note" aria-label="Share">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                     </button>
                     
+                    <!-- Export Dropdown -->
                     <div class="dropdown" id="dropdown-download">
-                        <button class="btn-icon dropdown-btn" title="Export Note" id="btn-export-toggle">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <button class="btn-icon dropdown-btn" title="Export Note" id="btn-export-toggle" aria-label="Export Note">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         </button>
                         <div class="dropdown-content" id="export-menu">
-                            <a href="#" data-format="txt">Text (.txt)</a>
-                            <a href="#" data-format="md">Markdown (.md)</a>
-                            <a href="#" data-format="html">HTML (.html)</a>
-                            <a href="#" data-format="pdf" class="export-premium">PDF (.pdf)</a>
-                            <a href="#" data-format="png" class="export-premium">Image (.png)</a>
+                            <div class="dropdown-header">Export Options</div>
+                            <a href="#" data-format="txt">📄 Plain Text (.txt)</a>
+                            <a href="#" data-format="md">📝 Markdown (.md)</a>
+                            <a href="#" data-format="html">🌐 Web HTML (.html)</a>
+                            <a href="#" data-format="pdf" class="export-premium">📑 Document PDF (.pdf)</a>
+                            <a href="#" data-format="png" class="export-premium">🖼️ High-Res Image (.png)</a>
                         </div>
                     </div>
 
-                    <button id="btn-delete" class="btn-danger" title="Delete Note">
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    <!-- Delete Note -->
+                    <button id="btn-delete" class="btn-danger" title="Delete Note" aria-label="Delete Note">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
                     </button>
                 </div>
             </div>
+
+            <!-- Note Tags Meta Section -->
+            <div class="note-meta-tags-container" id="note-meta-tags-container">
+                <span class="meta-tag-label">Tags:</span>
+                <div class="active-note-tags" id="active-note-tags">
+                    <!-- Note tags injected here -->
+                </div>
+                <button id="btn-add-tag" class="btn-add-tag-chip" title="Add Tag">+ Tag</button>
+            </div>
             
-            <div class="toolbar">
+            <!-- Rich Toolbar -->
+            <div class="toolbar" role="toolbar" aria-label="Formatting Controls">
                 <div class="toolbar-group">
                     <select id="font-select" class="font-select" title="Typography">
                         <option value="'Outfit', sans-serif">Outfit (Modern)</option>
-                        <option value="'Inter', sans-serif">Inter (Clean)</option>
+                        <option value="'Plus Jakarta Sans', sans-serif">Jakarta (Clean)</option>
+                        <option value="'Inter', sans-serif">Inter (Precision)</option>
                         <option value="'Merriweather', serif">Merriweather (Classic)</option>
                         <option value="'Fira Code', monospace">Fira Code (Code)</option>
                     </select>
                 </div>
                 
                 <div class="toolbar-group">
-                    <div class="btn-format" data-cmd="formatBlock" data-val="H1" title="Heading 1">H1</div>
-                    <div class="btn-format" data-cmd="formatBlock" data-val="H2" title="Heading 2">H2</div>
-                    <div class="btn-format" data-cmd="formatBlock" data-val="pre" title="Code Block">{"}</div>
+                    <button class="btn-format" data-cmd="formatBlock" data-val="H1" title="Heading 1">H1</button>
+                    <button class="btn-format" data-cmd="formatBlock" data-val="H2" title="Heading 2">H2</button>
+                    <button class="btn-format" data-cmd="formatBlock" data-val="H3" title="Heading 3">H3</button>
+                    <button class="btn-format" data-cmd="formatBlock" data-val="pre" title="Code Block">{"}</button>
                 </div>
 
                 <div class="toolbar-group">
-                    <div class="btn-format btn-size" data-size="up" title="Larger Selected Text">A+</div>
-                    <div class="btn-format btn-size" data-size="down" title="Smaller Selected Text">A-</div>
-                </div>
-                
-                <div class="toolbar-group">
-                    <div class="btn-format" data-cmd="bold" title="Bold"><b>B</b></div>
-                    <div class="btn-format" data-cmd="italic" title="Italic"><i>I</i></div>
-                    <div class="btn-format" data-cmd="underline" title="Underline"><u>U</u></div>
-                    <div class="btn-format" data-cmd="strikeThrough" title="Strikethrough"><s>S</s></div>
-                </div>
-                
-                <div class="toolbar-group">
-                    <div class="btn-format" data-cmd="justifyLeft" title="Align Left">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
-                    </div>
-                    <div class="btn-format" data-cmd="justifyCenter" title="Align Center">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="10" x2="6" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="18" y1="18" x2="6" y2="18"></line></svg>
-                    </div>
+                    <button class="btn-format" data-cmd="bold" title="Bold (Ctrl+B)"><b>B</b></button>
+                    <button class="btn-format" data-cmd="italic" title="Italic (Ctrl+I)"><i>I</i></button>
+                    <button class="btn-format" data-cmd="underline" title="Underline (Ctrl+U)"><u>U</u></button>
+                    <button class="btn-format" data-cmd="strikeThrough" title="Strikethrough"><s>S</s></button>
+                    <button class="btn-format" id="btn-highlight" title="Highlighter">
+                        <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                    </button>
                 </div>
 
                 <div class="toolbar-group">
-                    <div class="btn-format" data-cmd="insertUnorderedList" title="Bulleted List">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-                    </div>
-                    <div class="btn-format" data-cmd="insertOrderedList" title="Numbered List">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><path d="M4 6h1v4"></path><path d="M4 10h2"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
-                    </div>
+                    <button class="btn-format" data-cmd="insertUnorderedList" title="Bulleted List">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                    </button>
+                    <button class="btn-format" data-cmd="insertOrderedList" title="Numbered List">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><path d="M4 6h1v4"></path><path d="M4 10h2"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
+                    </button>
+                    <button class="btn-format" id="btn-insert-checklist" title="Interactive Checklist">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    </button>
                 </div>
                 
                 <div class="toolbar-group">
-                    <div class="btn-format" id="btn-insert-link" title="Insert Web Link">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                    </div>
+                    <button class="btn-format" id="btn-insert-link" title="Insert Link">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    </button>
+                    <button class="btn-format" id="btn-insert-callout" title="Insert Callout Note">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </button>
                     <label for="image-upload" class="btn-format" title="Upload Image" style="margin:0; cursor:pointer;">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                     </label>
                     <input type="file" id="image-upload" accept="image/*" style="display:none">
                 </div>
                 
                 <div class="toolbar-group">
                     <div class="color-picker" id="color-picker">
-                        <div class="color-option text-color" data-cmd="foreColor" data-val="#ffffff" style="--btn-color: #ffffff;" title="White Text"></div>
-                        <div class="color-option text-color" data-cmd="foreColor" data-val="#ef4444" style="--btn-color: #ef4444;" title="Red Text"></div>
-                        <div class="color-option text-color" data-cmd="foreColor" data-val="#10b981" style="--btn-color: #10b981;" title="Green Text"></div>
-                        <div class="color-option text-color" data-cmd="foreColor" data-val="#3b82f6" style="--btn-color: #3b82f6;" title="Blue Text"></div>
-                        <div class="color-option text-color" data-cmd="foreColor" data-val="#f59e0b" style="--btn-color: #f59e0b;" title="Yellow Text"></div>
+                        <div class="color-option text-color" data-cmd="foreColor" data-val="inherit" style="--btn-color: #ffffff;" title="Default Color"></div>
+                        <div class="color-option text-color" data-cmd="foreColor" data-val="#a855f7" style="--btn-color: #a855f7;" title="Purple Glow"></div>
+                        <div class="color-option text-color" data-cmd="foreColor" data-val="#06b6d4" style="--btn-color: #06b6d4;" title="Cyan Glow"></div>
+                        <div class="color-option text-color" data-cmd="foreColor" data-val="#10b981" style="--btn-color: #10b981;" title="Emerald Glow"></div>
+                        <div class="color-option text-color" data-cmd="foreColor" data-val="#f59e0b" style="--btn-color: #f59e0b;" title="Amber Glow"></div>
+                        <div class="color-option text-color" data-cmd="foreColor" data-val="#ef4444" style="--btn-color: #ef4444;" title="Rose Glow"></div>
                     </div>
                 </div>
             </div>
             
-            <div id="note-body" class="note-body-editor" contenteditable="true" data-placeholder="Start typing deeply... (Type '/' for commands or '# ' for Markdown)"></div>
-            
-            <div class="editor-footer">
-                <span id="word-count">0 words</span>
-                <span class="dot-separator">•</span>
-                <span id="char-count">0 characters</span>
-                <span class="dot-separator">•</span>
-                <span id="read-time" class="text-success">1 min read</span>
-                <span class="dot-separator desktop-only">•</span>
-                <span id="save-status" class="desktop-only">Saved to device</span>
+            <!-- Voice Audio Memo Recording Indicator Bar -->
+            <div id="memo-recording-bar" class="memo-recording-bar" style="display: none;">
+                <div class="memo-recording-content">
+                    <span class="recording-dot"></span>
+                    <span id="memo-recording-timer">00:00</span>
+                    <span class="recording-label">Recording Voice Audio Memo...</span>
+                </div>
+                <div class="memo-recording-actions">
+                    <button id="btn-cancel-memo" class="btn-ghost-sm">Cancel</button>
+                    <button id="btn-save-memo" class="btn-primary-sm">Save to Note</button>
+                </div>
             </div>
-        </div>
+
+            <!-- Dictation Live Indicator -->
+            <div id="dictation-indicator" class="dictation-bar" style="display: none;">
+                <div class="pulse-ring"></div>
+                <span id="dictation-text-feedback">Listening... Speak now into your microphone 🎙️</span>
+                <button id="btn-stop-dictation" class="btn-dictate-stop">Stop</button>
+            </div>
+
+            <!-- Note Content Area -->
+            <div id="note-body" class="note-body-editor" contenteditable="true" spellcheck="true" data-placeholder="Type deeply... Press '/' for block commands, '# ' for Markdown, or record a voice memo 🎙️"></div>
+            
+            <!-- Editor Footer -->
+            <div class="editor-footer">
+                <div class="footer-stats">
+                    <span id="word-count">0 words</span>
+                    <span class="dot-separator">•</span>
+                    <span id="char-count">0 characters</span>
+                    <span class="dot-separator">•</span>
+                    <span id="read-time" class="text-success">1 min read</span>
+                </div>
+                <div class="footer-status">
+                    <span id="save-status">Saved to device</span>
+                </div>
+            </div>
+        </section>
         
-        <!-- Empty State -->
-        <div class="empty-state" id="empty-state">
+        <!-- Empty State with Cute Interactive Mascot -->
+        <section class="empty-state" id="empty-state" aria-label="Welcome Screen">
             <div class="empty-state-content">
                 <div class="empty-glow"></div>
-                <svg viewBox="0 0 100 100" width="80" height="80" class="aura-logo" style="margin: 0 auto 20px" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="30" fill="var(--accent)" filter="blur(10px)" opacity="0.6"/>
-                    <circle cx="50" cy="50" r="10" fill="var(--text-primary)" />
-                </svg>
-                <h2>Welcome to Aura Notes</h2>
-                <p>The zenith of productivity and aesthetics.<br>Create a note to begin.</p>
-                <div id="btn-add-large" class="btn-primary" style="margin: 24px auto; width: auto; padding: 0 24px; border-radius: 20px; user-select: none;">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="margin-right: 8px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                    Create Note
+                
+                <!-- Cute Interactive Aura Mascot & Speech Bubble -->
+                <div class="cute-mascot-wrapper" id="cute-mascot-wrapper" title="Click or move cursor to interact with Aura Bot!">
+                    <div class="mascot-speech-bubble" id="mascot-speech-bubble">
+                        <span>Hello, Creator! Ready to write something amazing? ✨</span>
+                    </div>
+                    
+                    <div class="cute-mascot" id="cute-mascot">
+                        <div class="mascot-glow-ring"></div>
+                        <div class="mascot-face">
+                            <div class="mascot-eye left-eye">
+                                <div class="mascot-pupil"></div>
+                                <div class="mascot-sparkle"></div>
+                            </div>
+                            <div class="mascot-eye right-eye">
+                                <div class="mascot-pupil"></div>
+                                <div class="mascot-sparkle"></div>
+                            </div>
+                            <div class="mascot-blush left-blush"></div>
+                            <div class="mascot-blush right-blush"></div>
+                            <div class="mascot-smile"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Aura Notes</h2>
+                <p>The zenith of productivity, creativity, and aesthetics.<br>Capture your thoughts with beauty and speed.</p>
+                <div class="empty-actions-row">
+                    <button id="btn-add-large" class="btn-large-primary">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        <span>New Blank Note</span>
+                    </button>
+                    <button id="btn-templates-large" class="btn-large-ghost">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        <span>Browse Templates</span>
+                    </button>
+                </div>
+                <div class="keyboard-hints desktop-only">
+                    <span>Press <kbd>Ctrl</kbd> + <kbd>N</kbd> for new note</span>
+                    <span>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> for commands</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Modern Confirmation Modal (Replaces native browser confirm) -->
+    <div id="confirm-dialog-modal" class="modal-overlay">
+        <div class="modal-card confirm-dialog-card">
+            <div class="confirm-icon-wrapper" id="confirm-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 id="confirm-dialog-title">Delete Note</h3>
+            <p id="confirm-dialog-desc">Are you sure you want to permanently delete this note? This action cannot be undone.</p>
+            <div class="confirm-dialog-actions">
+                <button id="btn-confirm-cancel" class="btn-ghost">Cancel</button>
+                <button id="btn-confirm-action" class="btn-danger-confirm">Delete Note</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Focus Suite Modal: Pomodoro Timer & Ambient Lo-Fi / Rain Generator -->
+    <div id="focus-suite-modal" class="modal-overlay">
+        <div class="modal-card focus-suite-card">
+            <div class="modal-header">
+                <div class="modal-title-with-icon">
+                    <span class="focus-pulse-icon">⏱️</span>
+                    <h3>Focus Suite & Ambient Generator</h3>
+                </div>
+                <button class="btn-modal-close" data-close="focus-suite-modal">✕</button>
+            </div>
+            
+            <!-- Pomodoro Timer Section -->
+            <div class="pomodoro-container">
+                <div class="pomodoro-modes">
+                    <button class="pomo-mode-btn active" data-pomo-time="25">Focus (25m)</button>
+                    <button class="pomo-mode-btn" data-pomo-time="5">Short Break (5m)</button>
+                    <button class="pomo-mode-btn" data-pomo-time="15">Long Break (15m)</button>
+                </div>
+                <div class="pomo-clock-circle">
+                    <span id="pomo-timer-display">25:00</span>
+                    <span id="pomo-status-label">Deep Focus Mode</span>
+                </div>
+                <div class="pomo-controls">
+                    <button id="btn-pomo-start" class="btn-primary-wide">Start Focus</button>
+                    <button id="btn-pomo-reset" class="btn-ghost">Reset</button>
+                </div>
+            </div>
+
+            <!-- Ambient Sound Generator -->
+            <div class="ambient-sound-section">
+                <div class="ambient-section-title">
+                    <span>🎧 Soothing Ambient Soundscape (100% Offline)</span>
+                </div>
+                <div class="ambient-grid">
+                    <div class="ambient-card" data-sound="rain">
+                        <div class="ambient-icon">🌧️</div>
+                        <div class="ambient-info">
+                            <strong>Gentle Rain</strong>
+                            <span>Deep calming rainfall</span>
+                        </div>
+                        <button class="btn-ambient-toggle" data-ambient="rain">Play</button>
+                    </div>
+                    <div class="ambient-card" data-sound="lofi">
+                        <div class="ambient-icon">🎵</div>
+                        <div class="ambient-info">
+                            <strong>Lo-Fi Vinyl Chords</strong>
+                            <span>Warm vintage chords</span>
+                        </div>
+                        <button class="btn-ambient-toggle" data-ambient="lofi">Play</button>
+                    </div>
+                    <div class="ambient-card" data-sound="forest">
+                        <div class="ambient-icon">🌲</div>
+                        <div class="ambient-info">
+                            <strong>Pine Forest Birds</strong>
+                            <span>Rustling breeze & nature</span>
+                        </div>
+                        <button class="btn-ambient-toggle" data-ambient="forest">Play</button>
+                    </div>
+                    <div class="ambient-card" data-sound="cafe">
+                        <div class="ambient-icon">☕</div>
+                        <div class="ambient-info">
+                            <strong>Coffee Shop Murmur</strong>
+                            <span>Subtle cozy background</span>
+                        </div>
+                        <button class="btn-ambient-toggle" data-ambient="cafe">Play</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+        <button class="mobile-nav-item active" id="mob-nav-notes">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Notes</span>
+        </button>
+        <button class="mobile-nav-item" id="mob-nav-focus">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Focus</span>
+        </button>
+        <button class="mobile-nav-fab" id="mob-nav-add" aria-label="Create Note">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="mobile-nav-item" id="mob-nav-templates">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            <span>Templates</span>
+        </button>
+        <button class="mobile-nav-item" id="mob-nav-settings">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Themes</span>
+        </button>
+    </nav>
     
+    <!-- Quick Command Palette Modal (Ctrl+K) -->
+    <div id="command-palette-modal" class="modal-overlay">
+        <div class="command-palette-card">
+            <div class="command-input-row">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="command-search-input" placeholder="Type a command or search notes..." autocomplete="off">
+                <kbd>ESC</kbd>
+            </div>
+            <div class="command-results-list" id="command-results-list">
+                <!-- Results dynamically injected -->
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Tools Floating Menu Modal -->
+    <div id="ai-modal" class="modal-overlay">
+        <div class="modal-card ai-modal-card">
+            <div class="modal-header">
+                <div class="modal-title-with-icon">
+                    <span class="ai-sparkle-icon">✨</span>
+                    <h3>Aura AI Assistant</h3>
+                </div>
+                <button class="btn-modal-close" data-close="ai-modal">✕</button>
+            </div>
+            <div class="ai-options-grid">
+                <button class="ai-action-card" data-ai="summarize">
+                    <strong>📝 Summarize Note</strong>
+                    <span>Condense note into key executive takeaways</span>
+                </button>
+                <button class="ai-action-card" data-ai="bullets">
+                    <strong>📌 Extract Action Items</strong>
+                    <span>Turn content into actionable checklist items</span>
+                </button>
+                <button class="ai-action-card" data-ai="polish">
+                    <strong>✨ Polish & Fix Grammar</strong>
+                    <span>Enhance readability and eliminate errors</span>
+                </button>
+                <button class="ai-action-card" data-ai="tone-pro">
+                    <strong>💼 Professional Tone</strong>
+                    <span>Make note sound sharp, clear, and business-ready</span>
+                </button>
+                <button class="ai-action-card" data-ai="title">
+                    <strong>🏷️ Smart Title Generator</strong>
+                    <span>Generate an impactful title based on contents</span>
+                </button>
+                <button class="ai-action-card" data-ai="expand">
+                    <strong>🚀 Brainstorm & Expand</strong>
+                    <span>Generate creative follow-up points & ideas</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Sketchpad / Drawing Modal -->
+    <div id="sketch-modal" class="modal-overlay">
+        <div class="modal-card sketch-modal-card">
+            <div class="modal-header">
+                <h3>🎨 Aura Canvas Sketchpad</h3>
+                <div class="sketch-header-actions">
+                    <button id="btn-sketch-clear" class="btn-ghost-sm">Clear</button>
+                    <button class="btn-modal-close" data-close="sketch-modal">✕</button>
+                </div>
+            </div>
+            <div class="sketch-toolbar">
+                <div class="sketch-tool-group">
+                    <label>Color:</label>
+                    <div class="sketch-colors">
+                        <span class="sketch-color-dot active" data-color="#ffffff" style="background:#fff;"></span>
+                        <span class="sketch-color-dot" data-color="#a855f7" style="background:#a855f7;"></span>
+                        <span class="sketch-color-dot" data-color="#06b6d4" style="background:#06b6d4;"></span>
+                        <span class="sketch-color-dot" data-color="#10b981" style="background:#10b981;"></span>
+                        <span class="sketch-color-dot" data-color="#f59e0b" style="background:#f59e0b;"></span>
+                        <span class="sketch-color-dot" data-color="#ef4444" style="background:#ef4444;"></span>
+                    </div>
+                </div>
+                <div class="sketch-tool-group">
+                    <label>Brush Size:</label>
+                    <input type="range" id="brush-size" min="2" max="24" value="4">
+                </div>
+                <div class="sketch-tool-group">
+                    <button id="btn-brush-eraser" class="btn-icon" title="Eraser">🧹</button>
+                    <button id="btn-brush-pen" class="btn-icon active" title="Pen">✏️</button>
+                </div>
+            </div>
+            <div class="canvas-container">
+                <canvas id="sketch-canvas" width="700" height="420"></canvas>
+            </div>
+            <div class="sketch-modal-footer">
+                <button class="btn-ghost" data-close="sketch-modal">Cancel</button>
+                <button id="btn-insert-sketch" class="btn-primary-wide">Insert Drawing into Note</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates Gallery Modal -->
+    <div id="template-modal" class="modal-overlay">
+        <div class="modal-card template-modal-card">
+            <div class="modal-header">
+                <h3>Smart Note Templates</h3>
+                <button class="btn-modal-close" data-close="template-modal">✕</button>
+            </div>
+            <div class="templates-grid" id="templates-grid">
+                <!-- Templates injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Themes & Customization Modal -->
+    <div id="theme-modal" class="modal-overlay">
+        <div class="modal-card theme-modal-card">
+            <div class="modal-header">
+                <h3>Aura Themes & Aesthetics</h3>
+                <button class="btn-modal-close" data-close="theme-modal">✕</button>
+            </div>
+            <div class="theme-options-grid">
+                <div class="theme-card active" data-theme="theme-cosmic">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #07070c, #8e2de2);"></div>
+                    <strong>Cosmic Aura</strong>
+                    <span>Neon Violet & Deep Purple</span>
+                </div>
+                <div class="theme-card" data-theme="theme-cyber">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #050a14, #00f0ff);"></div>
+                    <strong>Cyber Neon</strong>
+                    <span>Cyberpunk Cyan & Magenta</span>
+                </div>
+                <div class="theme-card" data-theme="theme-emerald">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #05140b, #10b981);"></div>
+                    <strong>Emerald Matrix</strong>
+                    <span>Forest Pine & Mint Green</span>
+                </div>
+                <div class="theme-card" data-theme="theme-sunset">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #160a0a, #f59e0b);"></div>
+                    <strong>Sunset Glow</strong>
+                    <span>Warm Amber & Rose</span>
+                </div>
+                <div class="theme-card" data-theme="theme-oled">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #000000, #333333);"></div>
+                    <strong>OLED Obsidian</strong>
+                    <span>Pure Pitch Black Minimal</span>
+                </div>
+                <div class="theme-card" data-theme="theme-pristine">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #f8fafc, #6366f1);"></div>
+                    <strong>Pristine Light</strong>
+                    <span>Frosted Glass Daylight</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vault / PIN Lock Modal -->
+    <div id="vault-modal" class="modal-overlay">
+        <div class="modal-card vault-modal-card">
+            <div class="modal-header">
+                <h3 id="vault-modal-title">🔒 Encrypted Note Vault</h3>
+                <button class="btn-modal-close" data-close="vault-modal">✕</button>
+            </div>
+            <p id="vault-modal-desc" class="vault-modal-desc">Enter your 4-digit PIN to access this secure note.</p>
+            <div class="pin-display">
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+            </div>
+            <div class="pin-pad">
+                <button class="pin-btn" data-val="1">1</button>
+                <button class="pin-btn" data-val="2">2</button>
+                <button class="pin-btn" data-val="3">3</button>
+                <button class="pin-btn" data-val="4">4</button>
+                <button class="pin-btn" data-val="5">5</button>
+                <button class="pin-btn" data-val="6">6</button>
+                <button class="pin-btn" data-val="7">7</button>
+                <button class="pin-btn" data-val="8">8</button>
+                <button class="pin-btn" data-val="9">9</button>
+                <button class="pin-btn pin-clear" data-val="clear">C</button>
+                <button class="pin-btn" data-val="0">0</button>
+                <button class="pin-btn pin-back" data-val="back">⌫</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Backup & Restore Modal -->
+    <div id="backup-modal" class="modal-overlay">
+        <div class="modal-card backup-modal-card">
+            <div class="modal-header">
+                <h3>📦 Backup & Restore Notes</h3>
+                <button class="btn-modal-close" data-close="backup-modal">✕</button>
+            </div>
+            <p class="backup-desc">All notes are stored securely on your device. You can download a full backup file or restore previously saved data.</p>
+            <div class="backup-actions-grid">
+                <div class="backup-card">
+                    <h4>Export Backup</h4>
+                    <p>Download all your notes, tags, and settings as a single JSON file.</p>
+                    <button id="btn-download-backup" class="btn-primary-wide">Download JSON Backup</button>
+                </div>
+                <div class="backup-card">
+                    <h4>Restore from Backup</h4>
+                    <p>Import notes from an existing Aura Notes JSON backup file.</p>
+                    <label for="backup-file-input" class="btn-ghost-wide">Choose Backup File</label>
+                    <input type="file" id="backup-file-input" accept=".json" style="display:none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Slash Command Menu Overlay -->
-    <div id="slash-menu" class="slash-menu">
-        <div class="slash-header">Basic Blocks</div>
-        <div class="slash-item" data-cmd="formatBlock" data-val="H1">
+    <div id="slash-menu" class="slash-menu" role="menu">
+        <div class="slash-header">Block Elements</div>
+        <div class="slash-item" data-cmd="formatBlock" data-val="H1" role="menuitem">
             <span class="slash-icon">H1</span>
-            <div class="slash-text">Heading 1 <small>Big section heading</small></div>
+            <div class="slash-text">Heading 1 <small>Large section title</small></div>
         </div>
-        <div class="slash-item" data-cmd="formatBlock" data-val="H2">
+        <div class="slash-item" data-cmd="formatBlock" data-val="H2" role="menuitem">
             <span class="slash-icon">H2</span>
-            <div class="slash-text">Heading 2 <small>Medium section heading</small></div>
+            <div class="slash-text">Heading 2 <small>Medium section title</small></div>
         </div>
-        <div class="slash-item" data-cmd="formatBlock" data-val="H3">
+        <div class="slash-item" data-cmd="formatBlock" data-val="H3" role="menuitem">
             <span class="slash-icon">H3</span>
-            <div class="slash-text">Heading 3 <small>Small section heading</small></div>
+            <div class="slash-text">Heading 3 <small>Small sub-heading</small></div>
         </div>
-        <div class="slash-item" data-cmd="insertUnorderedList">
+        <div class="slash-item" data-cmd="insertChecklist" role="menuitem">
+            <span class="slash-icon">☑️</span>
+            <div class="slash-text">Interactive Checklist <small>Toggleable task items</small></div>
+        </div>
+        <div class="slash-item" data-cmd="insertUnorderedList" role="menuitem">
             <span class="slash-icon">•</span>
             <div class="slash-text">Bulleted List <small>Simple bullet points</small></div>
         </div>
-        <div class="slash-item" data-cmd="insertOrderedList">
+        <div class="slash-item" data-cmd="insertOrderedList" role="menuitem">
             <span class="slash-icon">1.</span>
-            <div class="slash-text">Numbered List <small>Numbered sequential list</small></div>
+            <div class="slash-text">Numbered List <small>Sequential numbered list</small></div>
         </div>
-        <div class="slash-item" data-cmd="formatBlock" data-val="BLOCKQUOTE">
+        <div class="slash-item" data-cmd="formatBlock" data-val="BLOCKQUOTE" role="menuitem">
             <span class="slash-icon">“</span>
-            <div class="slash-text">Quote Block <small>Capture a quote</small></div>
+            <div class="slash-text">Quote Block <small>Inspirational quote container</small></div>
         </div>
-        <div class="slash-item" data-cmd="formatBlock" data-val="pre">
+        <div class="slash-item" data-cmd="insertCallout" role="menuitem">
+            <span class="slash-icon">💡</span>
+            <div class="slash-text">Callout Note <small>Highlighted key insight box</small></div>
+        </div>
+        <div class="slash-item" data-cmd="formatBlock" data-val="pre" role="menuitem">
             <span class="slash-icon">{"}</span>
-            <div class="slash-text">Code Block <small>Monospaced code</small></div>
+            <div class="slash-text">Code Block <small>Monospaced snippet container</small></div>
         </div>
     </div>
     
-    <!-- Toasts -->
-    <div id="toast-container" class="toast-container"></div>
+    <!-- Toasts Notifications -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
     
     <script src="script.js" type="module"></script>
 </body>
